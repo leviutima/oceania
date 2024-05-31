@@ -10,10 +10,18 @@ const Contato = () => {
         <Header/>
             <section className={style.sectionContainer}>
                 <div className={style.cardContato}>
-                    <div>
+                    <div className={style.titleContainer}>
                         <Image src={logo} width={400} alt='logo oceânica'/>
-                        <h2>TEM DÚVIDAS?</h2>
-                        <h2>FALE CONOSCO!</h2>
+                        <div className={style.titleStyle}>
+                            <h2>TEM DÚVIDAS?</h2>
+                            <h2>FALE CONOSCO!</h2>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14628.48545458755!2d-46.6523865!3d-23.5640843!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c7dbf9ff57%3A0x4ca8eb5c4f7ecca9!2sFIAP%20-%20Paulista!5e0!3m2!1spt-BR!2sbr!4v1717197497621!5m2!1spt-BR!2sbr" 
+                        width="450" 
+                        height="300" 
+                        loading="lazy">
+                        </iframe>
+                        <span>ESTAMOS LOCALIZADOS NESSE ENDEREÇO</span>
                     </div>
                     <div className={style.container}>
                         <div className={style.containerInput}>
@@ -30,7 +38,7 @@ const Contato = () => {
                         </div>
                         <div className={style.containerInput}>
                             <label className={style.labelStyle}>DUVIDA:</label>
-                            <input className={style.inputStyleQuestion} type='text'></input>
+                            <input className={style.inputStyleQuestion} type='text' placeholder='Digite sua duvida...'></input>
                         </div>
                         <Button>ENVIAR</Button>
                     </div>

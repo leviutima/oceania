@@ -2,12 +2,46 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-color: var(--azul-claro);
     width: 7vw;
     height: 5vh;
-
     border-radius: 10px;
+    border: none ; 
     color: var(--cor-principal);
     font-weight: 700;
+    cursor: pointer; /* Adiciona um cursor pointer para parecer clicável */
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #708090;
+}
+
+.button:active {
+    background-color: var(--azul-claro);
+}
+
+.inverse {
+    background-color: var(--cor-principal);
+    color: var(--azul-claro);
+}
+
+.large {
+    width: 14vw; 
+    height: 10vh; 
+}
+
+.small {
+    width: 5vw; 
+    height: 3vh; 
+}
+
+.info {
+    background-color: #17a2b8; 
+    color: #ffffff; 
+}
+
+.danger {
+    background-color: #dc3545; 
+    color: #ffffff; 
 }
