@@ -16,3 +16,7 @@
     color: var(--cor-principal);
     font-size: 22px;
 }
+
+.imgBanner {
+    border-radius: 20px;
+}

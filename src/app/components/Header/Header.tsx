@@ -20,7 +20,7 @@ const Header = () => {
                             <Link href='*' className={style.Link}>
                                 <li className={style.menu}>Produtos</li>
                             </Link>
-                            <Link href='*' className={style.Link}> 
+                            <Link href='/Sobre' className={style.Link}> 
                                 <li className={style.menu}>Sobre</li>
                             </Link>
                             <Link href='/Contato' className={style.Link}>

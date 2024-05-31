@@ -1,0 +1,43 @@
+.sectionContainer {
+    display: flex;
+    justify-content: center;
+    margin: 5% 0 0 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardLogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+
+    width: 30vw;
+    height: 50vh;
+    background-color: var(--azul-escuro);
+    border-radius: 20px;
+
+    color: #fff;
+}
+
+.containerForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.labelStyle {
+    color: #c0c0c0;
+}
+
+.inputStyle {
+    width: 20vw;
+    height: 5vh;
+    border: none;
+    border-radius: 5px;
+}

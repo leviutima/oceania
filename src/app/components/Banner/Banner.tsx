@@ -1,14 +1,15 @@
-import Image from "next/image"
-import lixos from '../../assets/lixos.jpg'
+import Image, { StaticImageData } from "next/image"
+
 import React from "react"
 import style from '../Banner/Banner.module.css'
 
 interface Props {
     children: React.ReactNode
     titulo: string
+    img: StaticImageData
 }
 
-const Banner = ({ titulo, children}: Props) => {
+const Banner = ({ titulo, children, img}: Props) => {
     return(
         <>
             <section className={style.sectionContainer}>
@@ -17,7 +18,7 @@ const Banner = ({ titulo, children}: Props) => {
                     <p className={style.paragraph}>{children}</p>
                 </div>
                 <div>
-                    <Image src={lixos} width={700} alt="imagem piloto" priority={true}/>
+                    <Image src={img} width={700} alt="imagem piloto" priority={true} className={style.imgBanner}/>
                 </div>
             </section>
         </>
