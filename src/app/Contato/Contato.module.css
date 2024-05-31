@@ -1,0 +1,12 @@
+
+
+
+.sectionContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/sea-horizon-sunset-clouds-sky-1316283-wallhere.com.jpg');
+    background-size: cover;
+    background-position: center; 
+    height: 100vh; 
+}

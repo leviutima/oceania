@@ -17,7 +17,7 @@ const Banner = ({ titulo, children}: Props) => {
                     <p className={style.paragraph}>{children}</p>
                 </div>
                 <div>
-                    <Image src={lixos} width={700} alt="imagem piloto"/>
+                    <Image src={lixos} width={700} alt="imagem piloto" priority={true}/>
                 </div>
             </section>
         </>
