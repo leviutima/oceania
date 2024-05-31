@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.containerLista {
+    display: flex;
+    gap: 100px;
+}
+
+.menu {
+    list-style: none;
+    font-size: 20px;
+}
+
+.containerProfile {
+    display: flex;
+    gap: 22px;
+
+    font-size: 22px;
+}
