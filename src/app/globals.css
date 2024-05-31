@@ -1,5 +1,11 @@
+:root {
+  --cor-principal:#faf4ed;
+  --azul-escuro: #20354a;
+  --azul-claro: #354e67;
+}
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #faf4ed;
+  background-color: var(--cor-principal);
 }

@@ -7,7 +7,7 @@ import { FaCartShopping } from "react-icons/fa6";
 const Header = () => {
     return(
         <>
-            <header>
+            <header className={style.cabecalho}>
                 <nav className={style.container}>
                     <div>
                         <Image src={logo} alt="logo oceanica" width={180}/>
