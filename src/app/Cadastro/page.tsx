@@ -4,6 +4,7 @@ const Cadastro = () => {
     return(
         <>
             <Header/>
+            
         </>
     )
 }
