@@ -13,7 +13,7 @@ const Cadastro = () => {
                     <div className={style.blueSection}>
                         <div className={style.containerTitle}>
                             <h2>SEJA BEM VINDO!</h2>
-                            <Image src={logo} width={150}/>
+                            <Image src={logo} width={150} alt="Logo da oceânica"/>
                         </div>
                     </div>
                     <div className={style.form}>
