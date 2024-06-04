@@ -2,7 +2,7 @@
   --cor-principal: #FAF0E6;
   --azul-escuro: #20354a;
   --azul-claro: #354e67;
-  --azul-suporte: #4682B4;
+  --azul-suporte: #113946;
 }
 
 body {
@@ -27,8 +27,4 @@ html, #__next {
   flex: 1; /* Isto faz com que o conteúdo principal expanda */
 }
 
-.footer {
-  background-color: var(--azul-claro);
-  padding: 20px;
-  text-align: center;
-}
+
