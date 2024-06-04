@@ -8,7 +8,7 @@
     border-radius: 10px;
     border: none ; 
     color: var(--cor-principal);
-    font-weight: 700;
+    font-weight: 800;
     cursor: pointer; /* Adiciona um cursor pointer para parecer clicável */
     transition: background-color 0.3s ease;
 }

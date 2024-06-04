@@ -1,5 +1,68 @@
-.blueSection {
-    width: 50vw; /* 50% da largura da viewport */
-    height: 100vh; /* 100% da altura da viewport */
-    background-color: var(--azul-escuro); /* Apenas para visualizar a seção */
+.containerSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.containerTitle {
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardCadastro {
+    display: flex;
+}
+
+.blueSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 20vw;
+    height: 68vh;
+    border-radius: 10px 0 0 10px;
+    background-color: var(--azul-escuro);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    width: 40vw;
+    background-color: #fff;
+    border-radius: 0 10px 10px 0;
+}
+
+.titleForm {
+    font-size: 32px;
+    color: var(--azul-escuro);
+}
+
+.containerForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputCadastro {
+    border: none;
+    border-radius: 5px;
+    padding: 0 0 0 1%;
+
+    background-color: var(--cinza);
+    width: 20vw;
+    height: 5vh;
+}
+

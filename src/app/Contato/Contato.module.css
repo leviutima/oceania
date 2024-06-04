@@ -53,7 +53,7 @@
 }
 
 .labelStyle {
-    color: #C0C0C0;
+    color: var(--cinza);
 }
 
 .inputStyle {
