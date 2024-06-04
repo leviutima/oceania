@@ -1,6 +1,7 @@
 import Banner from "../components/Banner/Banner"
 import Header from "../components/Header/Header"
 import JLV from '../assets/JLV.jpeg'
+import Footer from "../components/Footer/Footer"
 
 const Sobre = () => {
     return(

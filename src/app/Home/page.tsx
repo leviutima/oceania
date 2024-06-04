@@ -1,6 +1,7 @@
 import lixos from '../assets/lixos.jpg'
 import Header from "../components/Header/Header";
 import Banner from "../components/Banner/Banner";
+import Footer from '../components/Footer/Footer';
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset 
       sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like 
       Aldus PageMaker including versions of Lorem Ipsum.</Banner>
+
     </>
   );
 }

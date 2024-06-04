@@ -3,6 +3,7 @@ import logo from '../assets/Logo-horizontal.png'
 import style from '../Contato/Contato.module.css'
 import Header from '../components/Header/Header'
 import Button from '../components/Button/Button'
+import Footer from '../components/Footer/Footer'
 
 const Contato = () => {
     return(
@@ -44,6 +45,7 @@ const Contato = () => {
                     </div>
                 </div>
             </section>
+
         </>
     )
 }

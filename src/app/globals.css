@@ -1,13 +1,34 @@
-
-
 :root {
-  --cor-principal:#FAF0E6;
+  --cor-principal: #FAF0E6;
   --azul-escuro: #20354a;
   --azul-claro: #354e67;
+  --azul-suporte: #4682B4;
 }
 
 body {
   margin: 0;
   padding: 0;
   background-color: var(--cor-principal);
+  height: 100%;
+}
+
+html, #__next {
+  height: 100%;
+  margin: 0;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrap {
+  flex: 1; /* Isto faz com que o conteúdo principal expanda */
+}
+
+.footer {
+  background-color: var(--azul-claro);
+  padding: 20px;
+  text-align: center;
 }
