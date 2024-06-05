@@ -3,7 +3,6 @@ import logo from '../assets/Logo-horizontal.png'
 import style from '../Contato/Contato.module.css'
 import Header from '../components/Header/Header'
 import Button from '../components/Button/Button'
-import Footer from '../components/Footer/Footer'
 
 const Contato = () => {
     return(
@@ -20,9 +19,10 @@ const Contato = () => {
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14628.48545458755!2d-46.6523865!3d-23.5640843!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c7dbf9ff57%3A0x4ca8eb5c4f7ecca9!2sFIAP%20-%20Paulista!5e0!3m2!1spt-BR!2sbr!4v1717197497621!5m2!1spt-BR!2sbr" 
                         width="450" 
                         height="300" 
-                        loading="lazy">
+                        loading="lazy"
+                        className={style.mapa}>
                         </iframe>
-                        <span>ESTAMOS LOCALIZADOS NESSE ENDEREÇO</span>
+                        <span className={style.localizacaoSpan}>ESTAMOS LOCALIZADOS NESSE ENDEREÇO</span>
                     </div>
                     <div className={style.container}>
                         <div className={style.containerInput}>

@@ -6,6 +6,11 @@
     background-size: cover;
     background-position: center; 
     height: 100vh; 
+
+    @media screen and (max-width: 768px){
+        max-height: 100%;
+        background-image: url('../assets/sea-horizon-sunset-clouds-sky-1316283-wallhere.com.jpg');
+    }
 }
 
 .titleContainer {
@@ -13,6 +18,20 @@
     flex-direction: column;
     align-items: center;
     color: var(--cor-principal);
+
+    @media screen and (max-width: 1540px) { 
+        .titleStyle{
+            display: none;
+        }
+        
+        .mapa {
+            display: none;
+        }
+        
+        .localizacaoSpan {
+            display: none;
+        }
+    }
 }
 
 .titleStyle {
@@ -33,7 +52,14 @@
     background-color: rgba(53, 78, 103, 0.9);
     padding: 5% 7% 5% 7%;
     border-radius: 10px;
+    
+    @media screen and (max-width: 1540px) { 
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;  
+    }
 }
+
 
 .container { 
     display: flex;
@@ -44,6 +70,10 @@
     background-color: var(--azul-escuro);
     padding: 4% 5% 10% 5%;
     border-radius: 10px;
+
+    @media screen and (max-width: 1540px) { 
+        padding: 20% 35% 10% 35%;
+    }
 }
 
 .containerInput {
@@ -75,4 +105,12 @@
 .inputStyleQuestion::placeholder {
     text-align: start; 
     padding-top: 5px; 
+}
+
+.mapa {
+
+}
+
+.localizacaoSpan {
+
 }

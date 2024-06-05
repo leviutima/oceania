@@ -4,9 +4,9 @@
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-  }
+}
   
-  .cartAside {
+.cartAside {
     position: fixed;
     top: 0;
     right: -350px; 
@@ -15,15 +15,15 @@
     color: var(--azul-escuro);
     background-color: white;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    transition: right 0.3s ease;
+    transition: right 0.3s ease, bottom 0.3s ease; /* Added transition for bottom */
     z-index: 1000;
-  }
+}
   
-  .cartAside.open {
+.cartAside.open {
     right: 0; 
-  }
+}
   
-  .closeButton {
+.closeButton {
     background: none;
     border: none;
     font-size: 1.5rem;
@@ -31,9 +31,33 @@
     top: 10px;
     right: 10px;
     cursor: pointer;
-  }
+}
   
-  .cartContent {
+.cartContent {
     padding: 20px;
-  }
-  
+}
+
+.linkStyle {
+    text-decoration: none;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .cartAside {
+        top: auto;
+        bottom: -100%;
+        right: 0;
+        height: 90%;
+        width: 100%;
+        transition: bottom 0.3s ease;
+    }
+
+    .cartAside.open {
+        bottom: 0; 
+    }
+
+    .closeButton {
+        top: 10px; /* Ensure the close button is near the top */
+        right: 10px;
+    }
+}

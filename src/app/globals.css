@@ -25,25 +25,49 @@ html, #__next {
 }
 
 .content-wrap {
-  flex: 1; 
+  flex: 1;
 }
 
+.firstContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Ajusta o gap para ser mais responsivo */
+  flex-wrap: wrap; /* Permite que os itens se ajustem quando o espaço é pequeno */
+}
 
+.columStyle {
+  display: flex;
+  flex-direction: column;
+  color: var(--cor-principal);
+  margin-bottom: 10px; /* Adiciona espaço inferior para itens empilhados */
+}
+
+.columStyle span {
+  font-weight: 700;
+}
+
+.linkStyle {
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--cor-principal);
+  text-decoration: none;
+}
+
+/* Estilização da barra de rolagem */
 ::-webkit-scrollbar {
-  width: 12px; 
-  height: 12px; 
+  width: 12px;
+  height: 12px;
 }
-
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--azul-claro);
   border-radius: 6px;
-  border: 3px solid var(--cor-principal); 
+  border: 3px solid var(--cor-principal);
 }
 
 * {
-  scrollbar-width: thin; 
-  scrollbar-color: var(--azul-claro) var(--cinza); 
+  scrollbar-width: thin;
+  scrollbar-color: var(--azul-claro) var(--cinza);
 }
 
 *::-webkit-scrollbar-track-piece {

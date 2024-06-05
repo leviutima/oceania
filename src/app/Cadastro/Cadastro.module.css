@@ -4,6 +4,9 @@
     align-items: center;
 
     padding: 1% 0 1% 0;
+
+    @media {max-width: ;
+    }
 }
 
 .containerTitle {

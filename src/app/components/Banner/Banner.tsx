@@ -1,12 +1,11 @@
-import Image, { StaticImageData } from "next/image"
-
-import React from "react"
-import style from '../Banner/Banner.module.css'
+import Image, { StaticImageData } from "next/image";
+import React from "react";
+import style from '../Banner/Banner.module.css';
 
 interface Props {
-    children: React.ReactNode
-    titulo: string
-    img: StaticImageData
+    children: React.ReactNode;
+    titulo: string;
+    img: StaticImageData;
 }
 
 const Banner = ({ titulo, children, img}: Props) => {
@@ -22,7 +21,7 @@ const Banner = ({ titulo, children, img}: Props) => {
                 </div>
             </section>
         </>
-    )
+    );
 }
 
-export default Banner
+export default Banner;

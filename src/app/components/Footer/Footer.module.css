@@ -1,3 +1,4 @@
+/* Footer.module.css */
 .footerStyle {
     display: flex;
 
@@ -9,7 +10,6 @@
     display: flex;
     align-items: center;
     gap: 100px;
-
     margin-left: 7%;
 }
 
@@ -28,4 +28,28 @@
     font-size: 14px;
     color: var(--cor-principal);
     text-decoration: none;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .footerStyle {
+        flex-direction: column;
+        height: auto; /* Adjust height for content */
+        padding: 20px; /* Add padding for better spacing */
+        text-align: center; /* Center text for readability */
+    }
+
+    .firstContainer {
+        flex-direction: colum;
+        gap: 20px; /* Reduce gap for better spacing */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .columStyle {
+        align-items: center; /* Center align column content */
+    }
+
+    .columStyle span, .linkStyle {
+        font-size: 10px; /* Adjust font size for better readability */
+    }
 }
