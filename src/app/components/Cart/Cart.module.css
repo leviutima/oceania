@@ -9,7 +9,7 @@
   .cartAside {
     position: fixed;
     top: 0;
-    right: -300px; 
+    right: -350px; 
     width: 350px;
     height: 100%;
     color: var(--azul-escuro);
