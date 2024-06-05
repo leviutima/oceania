@@ -25,7 +25,33 @@ html, #__next {
 }
 
 .content-wrap {
-  flex: 1; /* Isto faz com que o conteúdo principal expanda */
+  flex: 1; 
 }
 
 
+::-webkit-scrollbar {
+  width: 12px; 
+  height: 12px; 
+}
+
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--azul-claro);
+  border-radius: 6px;
+  border: 3px solid var(--cor-principal); 
+}
+
+* {
+  scrollbar-width: thin; 
+  scrollbar-color: var(--azul-claro) var(--cinza); 
+}
+
+*::-webkit-scrollbar-track-piece {
+  background: var(--cinza);
+}
+
+*::-webkit-scrollbar-thumb:vertical {
+  background-color: var(--azul-claro);
+  border-radius: 6px;
+  border: 3px solid var(--cor-principal);
+}
