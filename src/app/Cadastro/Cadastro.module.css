@@ -2,6 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding: 1% 0 1% 0;
 }
 
 .containerTitle {
