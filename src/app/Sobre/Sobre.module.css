@@ -33,3 +33,7 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
+.vivian {
+    background-color: var(--azul-escuro);
+    color: var(--cor-principal);
+}

@@ -3,6 +3,7 @@ import logo from '../../assets/Logo-vertical.png'
 import style from '../Header/Header.module.css'
 import { FaCartShopping } from "react-icons/fa6";
 import Link from "next/link";
+import Cart from "../Cart/Cart";
 
 
 const Header = () => {
@@ -29,7 +30,7 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className={style.containerProfile}>
-                        <FaCartShopping />
+                        <Cart/>
                         <Link href='/Login' className={style.Link}>
                             <span>Login</span>
                         </Link>

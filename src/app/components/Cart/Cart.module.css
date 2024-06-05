@@ -1,0 +1,39 @@
+/* Cart.module.css */
+.cartButton {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .cartAside {
+    position: fixed;
+    top: 0;
+    right: -300px; 
+    width: 350px;
+    height: 100%;
+    color: var(--azul-escuro);
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .cartAside.open {
+    right: 0; 
+  }
+  
+  .closeButton {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .cartContent {
+    padding: 20px;
+  }
+  
