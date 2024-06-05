@@ -1,4 +1,31 @@
 .footerStyle {
+    display: flex;
+
     background-color: var(--azul-suporte);
     height: 12vh;
+}
+
+.firstContainer {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+
+    margin-left: 7%;
+}
+
+.columStyle {
+    display: flex;
+    flex-direction: column;
+    color: var(--cor-principal);
+}
+
+.columStyle span {
+    font-weight: 700;
+}
+
+.linkStyle {
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--cor-principal);
+    text-decoration: none;
 }

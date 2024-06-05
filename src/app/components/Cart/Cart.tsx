@@ -2,8 +2,9 @@
 import { useState } from 'react';
 import styles from './Cart.module.css';
 import { FaCartShopping } from "react-icons/fa6";
+import { IoIosCloseCircle } from "react-icons/io";
 
-export default function Cart() {
+const Cart = () =>{
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   const toggleCart = () => {
@@ -16,7 +17,7 @@ export default function Cart() {
         <FaCartShopping />
       </button>
       <aside className={`${styles.cartAside} ${isCartOpen ? styles.open : ''}`}>
-        <button className={styles.closeButton} onClick={toggleCart}>×</button>
+        <button className={styles.closeButton} onClick={toggleCart}><IoIosCloseCircle /></button>
         <div className={styles.cartContent}>
           <h2>Seu Carrinho</h2>
           
@@ -25,3 +26,5 @@ export default function Cart() {
     </div>
   );
 }
+
+export default Cart
