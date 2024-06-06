@@ -23,28 +23,22 @@
     height: 50vh;
     background-color: var(--azul-escuro);
     border-radius: 20px;
-
     color: #fff;
-    .cardLogin {
+
+    @media (max-width: 768px) {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 22px;
-    
-        width: 30vw;
-        height: 50vh;
-        background-color: var(--azul-escuro);
-        border-radius: 20px;
-    
-        color: #fff;
+        gap: 42px;
+
+        width: 80vw;
+        height: 60vh;
     }
-    
 }
 
 .containerForm {
     display: flex;
     flex-direction: column;
+
+    
 }
 
 .labelStyle {
@@ -57,4 +51,20 @@
     border: none;
     border-radius: 5px;
     background-color: #DCDCDC;
+
+    @media (max-width: 768px) {
+
+        width: 70vw;
+        height: 6vh;
+    }
+}
+
+.containerSpan {
+    padding: 0 0 8% 0 ;
+}
+
+.spanStyle {
+    @media (max-width: 768px) {
+        display: none;
+    }
 }

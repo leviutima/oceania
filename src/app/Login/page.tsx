@@ -22,7 +22,9 @@ const Login = () => {
                     </div>
                     <Button>ENVIAR</Button>
                 </div>
-                <span>Ainda não tem cadastro? Clique <Link href='/Cadastro'>AQUI</Link> para criar uma conta</span>
+                <div className={style.containerSpan}>
+                    <span className={style.spanStyle}>Ainda não tem cadastro?</span> <span>Clique <Link href='/Cadastro'>AQUI</Link> para criar uma conta</span>
+                </div>
             </div>
         </section>
 

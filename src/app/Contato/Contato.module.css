@@ -19,7 +19,7 @@
     align-items: center;
     color: var(--cor-principal);
 
-    @media screen and (max-width: 1540px) { 
+    @media screen and (max-width: 1545px) { 
         .titleStyle{
             display: none;
         }
@@ -53,10 +53,10 @@
     padding: 5% 7% 5% 7%;
     border-radius: 10px;
     
-    @media screen and (max-width: 1540px) { 
+    @media (max-width:768px) {
+        display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 20px;  
+        padding: 1% 1% 1% 1%;
     }
 }
 
@@ -71,8 +71,8 @@
     padding: 4% 5% 10% 5%;
     border-radius: 10px;
 
-    @media screen and (max-width: 1540px) { 
-        padding: 20% 35% 10% 35%;
+    @media (max-width: 768px) { 
+
     }
 }
 
@@ -92,6 +92,10 @@
 
     border: none;
     border-radius: 10px;
+
+    @media (max-width:768px) {
+        padding:  0 0 0;
+    }
 
 }
 
