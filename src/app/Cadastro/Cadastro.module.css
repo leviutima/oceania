@@ -2,10 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1% 0;
 
-    padding: 1% 0 1% 0;
-
-    @media {max-width: ;
+    /* Adicionando media query para telas menores */
+    @media (max-width: 768px) {
+        padding: 2% 0;
     }
 }
 
@@ -26,7 +27,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: 20vw;
     height: 68vh;
     border-radius: 10px 0 0 10px;
@@ -39,7 +39,6 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-
     width: 40vw;
     background-color: #fff;
     border-radius: 0 10px 10px 0;
@@ -65,9 +64,14 @@
     border: none;
     border-radius: 5px;
     padding: 0 0 0 1%;
-
     background-color: var(--cinza);
     width: 20vw;
     height: 5vh;
 }
 
+/* Media query para ajustar o tamanho do input em telas menores */
+@media (max-width: 768px) {
+    .inputCadastro {
+        width: 80%;
+    }
+}

@@ -1,40 +1,79 @@
-'use client';
-
+// src/pages/Cadastro/Cadastro.tsx
+'use client'
 import { useState, FormEvent } from 'react';
 import Header from "../components/Header/Header";
 import style from '../Cadastro/Cadastro.module.css';
 import Button from "../components/Button/Button";
 import Image from "next/image";
 import logo from '../../../public/C-Baleia.png';
-import { createCliente, Cliente } from '../../services/clienteService';
+
+interface Cliente {
+    nm_clie: string;
+    cpf: string;
+    email: string;
+    senha: string;
+    dt_nasc: string;
+}
 
 const Cadastro = () => {
     const [nome, setNome] = useState<string>('');
     const [cpf, setCpf] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [senha, setSenha] = useState<string>('');
-    const [dt_nascimento, setDt_nascimento] = useState<string>(''); // Ajustado para dt_nascimento
-    const [erro, setErro] = useState<string>('');
-    const [sucesso, setSucesso] = useState<string>('');
+    const [dataNascimento, setDataNascimento] = useState<string>('');
+    const [error, setError] = useState<string>('');
+    const [success, setSuccess] = useState<string>('');
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+
+    const createCliente = async (cliente: Cliente): Promise<Cliente> => {
+        const API_URL = 'http://localhost:8080/clientes';
+        try {
+            const response = await fetch(API_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(cliente),
+            });
+
+            if (!response.ok) {
+                throw new Error('Erro ao criar cliente. Por favor, tente novamente mais tarde.');
+            }
+
+            return await response.json();
+        } catch (error) {
+            throw new Error('Erro ao conectar-se ao servidor. Por favor, verifique sua conexão de internet e tente novamente.');
+        }
+    };
 
     const handleSubmit = async (event: FormEvent) => {
         event.preventDefault();
-        const cliente: Cliente = { nome, cpf, email, senha, dt_nascimento }; // Ajustado para dt_nascimento
+        if (!nome || !cpf || !email || !senha || !dataNascimento) {
+            setError('Todos os campos são obrigatórios.');
+            return;
+        }
+
+        const cliente: Cliente = { nm_clie: nome, cpf, email, senha, dt_nasc: dataNascimento };
+
+        console.log('Dados do cliente a serem enviados:', cliente);
 
         try {
-            const clienteCriado = await createCliente(cliente);
-            console.log('Cliente criado com sucesso:', clienteCriado);
-            setSucesso('Cliente criado com sucesso!');
-            setErro('');
-        } catch (error) {
-            if (error instanceof Error) {
-                console.error('Falha ao criar cliente:', error.message);
-                setErro('Falha ao criar cliente: ' + error.message);
-            } else {
-                console.error('Falha ao criar cliente:', error);
-                setErro('Falha ao criar cliente: Erro desconhecido');
-            }
-            setSucesso('');
+            setIsLoading(true);
+            const createdCliente = await createCliente(cliente);
+            console.log('Cliente criado com sucesso:', createdCliente);
+            setSuccess('Cliente criado com sucesso!');
+            setError('');
+            setNome('');
+            setCpf('');
+            setEmail('');
+            setSenha('');
+            setDataNascimento('');
+        } catch (error: any) {
+            console.error('Erro ao criar cliente:', error.message);
+            setError('Erro ao criar cliente: ' + error.message);
+            setSuccess('');
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -45,7 +84,7 @@ const Cadastro = () => {
                 <div className={style.cardCadastro}>
                     <div className={style.blueSection}>
                         <div className={style.containerTitle}>
-                            <h2>SEJA BEM-VINDO!</h2>
+                            <h2>SEJA BEM VINDO!</h2>
                             <Image src={logo} width={150} alt="Logo da oceânica" priority={true} />
                         </div>
                     </div>
@@ -67,7 +106,7 @@ const Cadastro = () => {
                                 <input 
                                     className={style.inputCadastro} 
                                     type="text" 
-                                    placeholder="Digite seu CPF..." 
+                                    placeholder="Digite seu cpf..." 
                                     value={cpf}
                                     onChange={(e) => setCpf(e.target.value)}
                                 />
@@ -97,14 +136,16 @@ const Cadastro = () => {
                                 <input 
                                     className={style.inputCadastro} 
                                     type="date" 
-                                    value={dt_nascimento} // Ajustado para dt_nascimento
-                                    onChange={(e) => setDt_nascimento(e.target.value)}
+                                    value={dataNascimento}
+                                    onChange={(e) => setDataNascimento(e.target.value)}
                                 />
                             </div>
-                            <Button type="submit">CRIAR</Button>
+                            <Button type="submit" disabled={isLoading}>
+                                {isLoading ? 'Criando...' : 'CRIAR'}
+                            </Button>
                         </form>
-                        {erro && <p className={style.errorMessage}>{erro}</p>}
-                        {sucesso && <p className={style.successMessage}>{sucesso}</p>}
+                        {error && <p className={style.errorMessage}>{error}</p>}
+                        {success && <p className={style.successMessage}>{success}</p>}
                     </div>
                 </div>
             </section>

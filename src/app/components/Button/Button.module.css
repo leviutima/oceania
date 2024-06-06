@@ -9,7 +9,7 @@
     border: none ; 
     color: var(--cor-principal);
     font-weight: 800;
-    cursor: pointer; /* Adiciona um cursor pointer para parecer clicável */
+    cursor: pointer; 
     transition: background-color 0.3s ease;
 }
 
@@ -44,4 +44,17 @@
 .danger {
     background-color: #dc3545; 
     color: #ffffff; 
+}
+
+/* Media queries para tornar o botão responsivo */
+@media only screen and (max-width: 768px) {
+    .button {
+        width: 15vw; /* Aumenta a largura para telas menores */
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .button {
+        width: 20vw; /* Aumenta ainda mais a largura para telas ainda menores */
+    }
 }
