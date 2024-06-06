@@ -20,13 +20,15 @@
     border-radius: 20px;
 }
 
-/* Media query for mobile view */
-@media (max-width: 768px) {
+
+
+
+@media (max-width: 1375px) {
     .sectionContainer {
         flex-direction: column;
         align-items: center;
-        padding: 10% 5%; /* Adjust padding for better mobile view */
-        text-align: center; /* Center text for better readability */
+        padding: 10% 5%; 
+        text-align: center; 
     }
 
     .title {
@@ -34,7 +36,7 @@
     }
 
     .paragraph {
-        font-size: 18px; /* Adjust font size for mobile */
+        font-size: 18px; 
     }
 
     .imgBanner {

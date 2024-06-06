@@ -13,10 +13,10 @@
 
 .fotosContainer {
     display: flex;
-    gap: 150px;
+    gap: 100px;
     padding: 1% 0 2% 0;
 
-    @media (max-width:768px) {
+    @media (max-width:768px){
         display: flex;
         flex-direction: column;
         gap: 25px;
@@ -46,12 +46,6 @@
 .foto {
     border-radius: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-    @media (max-width: 768px) {
-        border-radius: 50px;
-        width: 50vw;
-        height: 27vh;
-    }
 }
 
 .foto:hover {
