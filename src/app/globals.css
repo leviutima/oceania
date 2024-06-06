@@ -1,3 +1,7 @@
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+
 :root {
   --cor-principal: #FAF0E6;
   --azul-escuro: #20354a;
