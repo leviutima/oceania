@@ -3,7 +3,6 @@
     justify-content: center;
     align-items: center;
     padding: 1% 0;
-
 }
 
 .containerTitle {
@@ -65,9 +64,55 @@
     height: 5vh;
 }
 
-
 @media (max-width: 768px) {
+    .blueSection {
+        display: none;
+    }
+
+    .containerForm {
+        display: flex;
+        align-items: center;
+    }
+
+    .form {
+        border-radius: 10px 10px 10px;
+        width: 80vw;
+        height: 80vh;
+        padding-bottom: 10%;
+
+        display: flex;
+        gap: 1px;
+    }
+
+
     .inputCadastro {
-        width: 80%;
+        width: 70vw;
+    }
+}
+
+@media (min-width:770px) and (max-width: 1589px){
+    .blueSection {
+        display: none;
+    }
+
+    .containerForm {
+        display: flex;
+        align-items: center;
+    }
+
+    .form { 
+        justify-content: center;
+        border-radius: 10px 10px 10px 10px;
+        height: 70vh;
+    }
+}
+
+@media (min-width: 1593px) {
+    .blueSection {
+        display: flex;
+    }
+    .form {
+        width: 40vw;
+        border-radius: 0 10px 10px 0;
     }
 }
