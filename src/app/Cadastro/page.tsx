@@ -1,4 +1,3 @@
-// src/pages/Cadastro/Cadastro.tsx
 'use client'
 import { useState, FormEvent } from 'react';
 import Header from "../components/Header/Header";
@@ -6,14 +5,7 @@ import style from '../Cadastro/Cadastro.module.css';
 import Button from "../components/Button/Button";
 import Image from "next/image";
 import logo from '../../../public/C-Baleia.png';
-
-interface Cliente {
-    nm_clie: string;
-    cpf: string;
-    email: string;
-    senha: string;
-    dt_nasc: string;
-}
+import { createCliente, Cliente } from '../../Services/ClienteService';
 
 const Cadastro = () => {
     const [nome, setNome] = useState<string>('');
@@ -25,25 +17,9 @@ const Cadastro = () => {
     const [success, setSuccess] = useState<string>('');
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
-    const createCliente = async (cliente: Cliente): Promise<Cliente> => {
-        const API_URL = 'http://localhost:8080/clientes';
-        try {
-            const response = await fetch(API_URL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(cliente),
-            });
-
-            if (!response.ok) {
-                throw new Error('Erro ao criar cliente. Por favor, tente novamente mais tarde.');
-            }
-
-            return await response.json();
-        } catch (error) {
-            throw new Error('Erro ao conectar-se ao servidor. Por favor, verifique sua conexão de internet e tente novamente.');
-        }
+    const formatDate = (date: string): string => {
+        const [year, month, day] = date.split('-');
+        return `${day}-${month}-${year}`;
     };
 
     const handleSubmit = async (event: FormEvent) => {
@@ -53,7 +29,8 @@ const Cadastro = () => {
             return;
         }
 
-        const cliente: Cliente = { nm_clie: nome, cpf, email, senha, dt_nasc: dataNascimento };
+        const formattedDate = formatDate(dataNascimento);
+        const cliente: Cliente = { nm_clie: nome, cpf, email, senha, dt_nasc: formattedDate };
 
         console.log('Dados do cliente a serem enviados:', cliente);
 
