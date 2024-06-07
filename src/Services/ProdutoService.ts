@@ -3,13 +3,13 @@ import axios from 'axios';
 const API_URL = "http://localhost:8080/produtos"; 
 
 export interface Produto {
-    id_prod: number;
+    id: string; 
     nm_prod: string;
+    imagem: string;
     desc_prod: string;
     preco: number;
     estoque: number;
     categoria: string;
-    imagem: string;
 }
 
 export const getProdutoById = async (id: number): Promise<Produto> => {

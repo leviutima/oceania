@@ -10,7 +10,6 @@ import Vivian from '../assets/integrantes/vivian 4.png'
 const Sobre = () => {
     return(
         <>  
-            <Header/>
             <Banner img={JLV} titulo="SOBRE NÓS">Nós somos o time JLV, formados pelo acaso para resolver problemas. Começamos com a empresa Sales Force,
                 e agora estamos dando um passo maior e procurando ajudar o meio ambiente utilizando a tecnologia. Estamos trabalhando para levantar um ecommerce, 
                 visando diminuição de poluição nos oceanos. Sabemos que nos dias atuais esse é UM DOS maiores problemas ambientais e infelizmente não se tem a 

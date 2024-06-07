@@ -3,6 +3,9 @@
     display: flex;
     background-color: var(--azul-suporte);
     height: 12vh;
+
+    justify-content: space-between;
+    align-items: center;
 }
 
 .firstContainer {
@@ -10,6 +13,15 @@
     align-items: center;
     gap: 100px;
     margin-left: 7%;
+}
+
+.secondContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.integrantes {
+    color: #fff;
 }
 
 .columStyle {

@@ -56,7 +56,7 @@ const Cadastro = () => {
 
     return (
         <>
-            <Header />
+
             <section className={style.containerSection}>
                 <div className={style.cardCadastro}>
                     <div className={style.blueSection}>

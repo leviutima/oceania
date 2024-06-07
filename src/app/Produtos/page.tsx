@@ -1,12 +1,11 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import Header from '../components/Header/Header';
 import ProdutoCard from '../components/Card/Card';
 import { Produto, getAllProdutos } from '../../Services/ProdutoService';
 import Grid from '@mui/material/Grid';
 import CircularProgress from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Typography';
-import style from '../Produtos/Produtos.module.css'
+import style from '../Produtos/Produtos.module.css';
 
 const ProdutoPage: React.FC = () => {
     const [produtos, setProdutos] = useState<Produto[]>([]);
@@ -14,21 +13,34 @@ const ProdutoPage: React.FC = () => {
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
+        console.log('ProdutoPage montado'); 
+        let isMounted = true; 
+
         const fetchProdutos = async () => {
             try {
                 const data = await getAllProdutos();
-                console.log("Produtos recuperados:", data);
-                setProdutos(data);
+                if (isMounted) {
+                    console.log("Produtos recuperados:", data);
+                    setProdutos(data);
+                }
             } catch (error: any) {
-                console.error("Erro ao recuperar produtos:", error);
-                setError(error.message);
+                if (isMounted) {
+                    console.error("Erro ao recuperar produtos:", error);
+                    setError(error.message);
+                }
             } finally {
-                setLoading(false);
+                if (isMounted) {
+                    setLoading(false);
+                }
             }
         };
 
         fetchProdutos();
-    }, []);
+
+        return () => {
+            isMounted = false; 
+        };
+    }, []); 
 
     if (loading) {
         return <CircularProgress />;
@@ -40,12 +52,11 @@ const ProdutoPage: React.FC = () => {
 
     return (
         <>
-            <Header />
             <div className={style.containerAll}>
                 <h1>Lista de Produtos</h1>
                 <div className={style.containerProd}>
                     {produtos.map((produto) => (
-                        <Grid item key={produto.id_prod} xs={12} sm={6} md={4} className={style.produtoItem}>
+                        <Grid item key={produto.id} xs={12} sm={6} md={4} className={style.produtoItem}>
                             <ProdutoCard produto={produto} />
                         </Grid>
                     ))}

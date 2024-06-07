@@ -6,7 +6,7 @@ import style from '../Login/Login.module.css'
 const Login = () => {
     return(
         <>
-        <Header/>
+
         <section className={style.sectionContainer}>
             <div className={style.container}>
                 <div className={style.cardLogin}>

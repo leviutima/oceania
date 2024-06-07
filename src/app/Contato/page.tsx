@@ -7,7 +7,7 @@ import Button from '../components/Button/Button'
 const Contato = () => {
     return(
         <>
-        <Header/>
+
             <section className={style.sectionContainer}>
                 <div className={style.cardContato}>
                     <div className={style.titleContainer}>

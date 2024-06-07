@@ -9,7 +9,7 @@ const Checkout = () => {
 
     return (
         <>
-            <Header />
+
             <section className={styles.checkoutSection}>
                 <div className={styles.checkoutContainer}>
                     <div className={styles.mainContent}>
