@@ -1,7 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import Banner from "../components/Banner/Banner";
-import Footer from '../components/Footer/Footer';
 import lixos from '../assets/lixos.jpg'
 import style from '../Home/page.module.css'
 import ProdutoCard from '../components/Card/Card'; 
