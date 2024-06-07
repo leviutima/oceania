@@ -11,7 +11,6 @@ const Checkout = () => {
 
     return (
         <>
-            <Header /> {/* Supondo que você tenha um componente Header para a navegação */}
             <section className={styles.checkoutSection}>
                 <div className={styles.checkoutContainer}>
                     <div className={styles.mainContent}>
