@@ -4,10 +4,6 @@
     align-items: center;
     padding: 1% 0;
 
-    /* Adicionando media query para telas menores */
-    @media (max-width: 768px) {
-        padding: 2% 0;
-    }
 }
 
 .containerTitle {
@@ -69,7 +65,7 @@
     height: 5vh;
 }
 
-/* Media query para ajustar o tamanho do input em telas menores */
+
 @media (max-width: 768px) {
     .inputCadastro {
         width: 80%;

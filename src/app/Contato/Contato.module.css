@@ -13,25 +13,15 @@
     }
 }
 
+.logoOceania {
+
+}
+
 .titleContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: var(--cor-principal);
-
-    @media screen and (max-width: 1545px) { 
-        .titleStyle{
-            display: none;
-        }
-        
-        .mapa {
-            display: none;
-        }
-        
-        .localizacaoSpan {
-            display: none;
-        }
-    }
 }
 
 .titleStyle {
@@ -50,14 +40,12 @@
     gap: 100px;
 
     background-color: rgba(53, 78, 103, 0.9);
-    padding: 5% 7% 5% 7%;
+    width: 70vw;
+    height: 80vh;
+    padding-top: 3%;
     border-radius: 10px;
     
-    @media (max-width:768px) {
-        display: flex;
-        flex-direction: column;
-        padding: 1% 1% 1% 1%;
-    }
+
 }
 
 
@@ -68,12 +56,11 @@
     gap: 22px;
 
     background-color: var(--azul-escuro);
-    padding: 4% 5% 10% 5%;
+    padding-top: 2%;
+    width: 20vw;
+    height: 70vh;
     border-radius: 10px;
 
-    @media (max-width: 768px) { 
-
-    }
 }
 
 .containerInput {
@@ -101,7 +88,7 @@
 
 .inputStyleQuestion {
     width: 15vw;
-    padding: 1% 0 65% 1%;
+    height: 18vh;
     border-radius: 10px;
     border: none;
 }
@@ -117,4 +104,142 @@
 
 .localizacaoSpan {
 
+}
+
+@media (min-width: 610px) and (max-width: 768px) {
+    .logoOceania {
+        width:30vw;
+        height: 10vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardContato {
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+
+        background-color: transparent;
+    }
+
+    .titleStyle h2{
+        display: none;
+    }
+
+    .localizacaoSpan {
+        display: none;
+    }
+
+    .mapa {
+        display: none;
+    }
+
+    .logoOceania{
+        width: 100vw;
+    }
+
+    .container {
+        width: 70vw;
+        height: 85vh;
+
+        padding-bottom: 5%;
+    }
+
+    .containerInput {
+        padding-top: 5%;
+    }
+
+    .inputStyle {
+        width: 55vw;
+        height: 6vh;
+    }
+
+    .inputStyleQuestion {
+        width: 55vw;
+        height: 15vh;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+    .cardContato {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1px;
+
+        background-color: transparent;
+    }
+
+    .logoOceania {
+        width: 80vw;
+    }
+
+    .titleStyle h2{
+        display: none;
+    }
+
+    .localizacaoSpan {
+        display: none;
+    }
+
+    .mapa {
+        display: none;
+    }
+
+    .container {
+        width: 50vw;
+        height: 55vh;
+    }
+
+    .inputStyle {
+        width: 40vw;
+        height: 5vh;
+    }
+
+    .inputStyleQuestion {
+        width: 40vw;
+    }
+
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    
+    .cardContato {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 90vh;
+
+        gap: 1px;
+    }
+
+    .titleStyle h2{
+        display: none;
+    }
+
+    .localizacaoSpan {
+        display: none;
+    }
+
+    .mapa {
+        display: none;
+    }
+
+    .container {
+        width: 50vw;
+        height: 60vh;
+    }
+
+    .inputStyle {
+        width: 40vw;
+        height: 5vh;
+    }
+
+    .inputStyleQuestion {
+        width: 40vw;
+    }
 }

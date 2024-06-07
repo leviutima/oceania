@@ -15,7 +15,7 @@ export const createCliente = async (cliente: Cliente): Promise<Cliente> => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(cliente),
+                body: JSON.stringify(cliente),
         });
 
         if (!response.ok) {

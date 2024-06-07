@@ -2,7 +2,6 @@ import Link from "next/link"
 import Button from "../components/Button/Button"
 import Header from "../components/Header/Header"
 import style from '../Login/Login.module.css'
-import Footer from "../components/Footer/Footer"
 
 const Login = () => {
     return(

@@ -25,13 +25,6 @@
     border-radius: 20px;
     color: #fff;
 
-    @media (max-width: 768px) {
-        display: flex;
-        gap: 42px;
-
-        width: 80vw;
-        height: 60vh;
-    }
 }
 
 .containerForm {
@@ -51,12 +44,6 @@
     border: none;
     border-radius: 5px;
     background-color: #DCDCDC;
-
-    @media (max-width: 768px) {
-
-        width: 70vw;
-        height: 6vh;
-    }
 }
 
 .containerSpan {
@@ -68,3 +55,30 @@
         display: none;
     }
 }
+
+@media (min-width: 769px) and (max-width: 1199px) {
+
+    .cardLogin {
+        width: 70vw;
+        height: 60vh;
+    }
+    
+    .inputStyle {
+        width: 50vw;
+        
+    }
+
+}
+
+@media (max-width: 768px) {
+    .cardLogin{
+        width: 80vw;
+        height: 60vh;
+    }
+
+    .inputStyle {
+        width: 70vw;
+        height: 6vh;
+    }
+}
+

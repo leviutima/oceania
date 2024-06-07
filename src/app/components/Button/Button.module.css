@@ -46,15 +46,20 @@
     color: #ffffff; 
 }
 
-/* Media queries para tornar o botão responsivo */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .button {
+        width: 12vw;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .button {
-        width: 15vw; /* Aumenta a largura para telas menores */
+        width: 15vw; 
     }
 }
 
 @media only screen and (max-width: 576px) {
     .button {
-        width: 20vw; /* Aumenta ainda mais a largura para telas ainda menores */
+        width: 20vw; 
     }
 }

@@ -11,7 +11,7 @@ const Contato = () => {
             <section className={style.sectionContainer}>
                 <div className={style.cardContato}>
                     <div className={style.titleContainer}>
-                        <Image src={logo} width={400} alt='logo oceânica'/>
+                        <Image src={logo} width={400} alt='logo oceânica' className={style.logoOceania}/>
                         <div className={style.titleStyle}>
                             <h2>TEM DÚVIDAS?</h2>
                             <h2>FALE CONOSCO!</h2>
