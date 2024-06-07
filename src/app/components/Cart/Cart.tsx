@@ -5,7 +5,7 @@ import { FaCartShopping } from "react-icons/fa6";
 import { IoIosCloseCircle } from "react-icons/io";
 import Button from '../Button/Button';
 import Link from 'next/link';
-import { useCart } from '../Cart/CartContext'; // Ajuste o caminho conforme necessário
+import { useCart } from '../Cart/CartContext'; 
 
 const Cart = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);

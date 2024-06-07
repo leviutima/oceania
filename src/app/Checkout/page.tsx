@@ -1,15 +1,17 @@
-'use client'
-import React, { useState } from "react";
+'use client';
+
+import React from "react";
 import Header from "../components/Header/Header";
 import styles from "./Checkout.module.css";
 import Button from "../components/Button/Button";
+import { useCart } from "../components/Cart/CartContext"; // Importando o hook useCart
 
 const Checkout = () => {
-    const [paymentMethod, setPaymentMethod] = useState('creditCard');
+    const { cart, total } = useCart(); // Obtendo os itens do carrinho e o total do contexto
 
     return (
         <>
-
+            <Header /> {/* Supondo que você tenha um componente Header para a navegação */}
             <section className={styles.checkoutSection}>
                 <div className={styles.checkoutContainer}>
                     <div className={styles.mainContent}>
@@ -18,75 +20,31 @@ const Checkout = () => {
                         <div className={styles.paymentSection}>
                             <h2>Forma de Pagamento</h2>
                             <div className={styles.paymentOptions}>
-                                <label className={`${styles.paymentOption} ${paymentMethod === 'creditCard' ? styles.selected : ''}`}>
-                                    <input
-                                        type="radio"
-                                        name="paymentMethod"
-                                        value="creditCard"
-                                        checked={paymentMethod === 'creditCard'}
-                                        onChange={() => setPaymentMethod('creditCard')}
-                                    />
-                                    Cartão de Crédito
-                                </label>
-                                <label className={`${styles.paymentOption} ${paymentMethod === 'pix' ? styles.selected : ''}`}>
-                                    <input
-                                        type="radio"
-                                        name="paymentMethod"
-                                        value="pix"
-                                        checked={paymentMethod === 'pix'}
-                                        onChange={() => setPaymentMethod('pix')}
-                                    />
-                                    Pix
-                                </label>
-                                <label className={`${styles.paymentOption} ${paymentMethod === 'boleto' ? styles.selected : ''}`}>
-                                    <input
-                                        type="radio"
-                                        name="paymentMethod"
-                                        value="boleto"
-                                        checked={paymentMethod === 'boleto'}
-                                        onChange={() => setPaymentMethod('boleto')}
-                                    />
-                                    Boleto
-                                </label>
+                                {/* Código para seleção da forma de pagamento */}
                             </div>
 
-                            {paymentMethod === 'creditCard' && (
-                                <>
-                                    <div className={`${styles.formGroup} ${styles.fullWidth}`}>
-                                        <label htmlFor="cardName">Nome no cartão</label>
-                                        <input type="text" id="cardName" name="cardName" required />
-                                    </div>
-                                    <div className={`${styles.formGroup} ${styles.fullWidth}`}>
-                                        <label htmlFor="cardNumber">Número do cartão</label>
-                                        <input type="text" id="cardNumber" name="cardNumber" required pattern="\d{16}" title="Digite um número de cartão de crédito válido" />
-                                    </div>
-                                    <div className={`${styles.formGroup} ${styles.fullWidth}`}>
-                                        <label htmlFor="expiryDate">Data de validade</label>
-                                        <input type="text" id="expiryDate" name="expiryDate" required pattern="\d{2}/\d{2}" title="Digite no formato MM/AA" placeholder="MM/AA" />
-                                    </div>
-                                    <div className={`${styles.formGroup} ${styles.fullWidth}`}>
-                                        <label htmlFor="cvv">CVV</label>
-                                        <input type="text" id="cvv" name="cvv" required pattern="\d{3}" title="Digite um CVV válido" />
-                                    </div>
-                                </>
-                            )}
-
-                            {paymentMethod === 'pix' && (
-                                <div>
-                                    <p>Para pagar com Pix, escaneie o QR code abaixo ou copie o código Pix para colar no seu aplicativo bancário.</p>
-                                    <img src="https://via.placeholder.com/200" alt="QR Code Pix" />
-                                    <p>Código Pix: Código exemplo</p>
+                            {/* Inputs para informações de pagamento */}
+                            <div className={styles.paymentInputs}>
+                                <div className={`${styles.formGroup} ${styles.fullWidth}`}>
+                                    <label htmlFor="cardName">Nome no cartão</label>
+                                    <input type="text" id="cardName" name="cardName" required />
                                 </div>
-                            )}
-
-                            {paymentMethod === 'boleto' && (
-                                <div>
-                                    <p>Para pagar com boleto, clique no botão abaixo para gerar seu boleto bancário.</p>
-                                    <Button>Gerar Boleto</Button>
+                                <div className={`${styles.formGroup} ${styles.fullWidth}`}>
+                                    <label htmlFor="cardNumber">Número do cartão</label>
+                                    <input type="text" id="cardNumber" name="cardNumber" required pattern="\d{16}" title="Digite um número de cartão de crédito válido" />
                                 </div>
-                            )}
+                                <div className={`${styles.formGroup} ${styles.fullWidth}`}>
+                                    <label htmlFor="expiryDate">Data de validade</label>
+                                    <input type="text" id="expiryDate" name="expiryDate" required pattern="\d{2}/\d{2}" title="Digite no formato MM/AA" placeholder="MM/AA" />
+                                </div>
+                                <div className={`${styles.formGroup} ${styles.fullWidth}`}>
+                                    <label htmlFor="cvv">CVV</label>
+                                    <input type="text" id="cvv" name="cvv" required pattern="\d{3}" title="Digite um CVV válido" />
+                                </div>
+                            </div>
                         </div>
 
+                        {/* Inputs para informações de endereço */}
                         <div className={styles.addressSection}>
                             <h2>Endereço</h2>
                             <div className={styles.formGroup}>
@@ -131,18 +89,16 @@ const Checkout = () => {
                     <aside className={styles.summarySection}>
                         <h2>Resumo</h2>
                         <div>
-                            <div className={styles.summaryItem}>
-                                <span>Produto 1</span>
-                                <span>R$ 50,00</span>
-                            </div>
-                            <div className={styles.summaryItem}>
-                                <span>Produto 2</span>
-                                <span>R$ 30,00</span>
-                            </div>
+                            {cart.map((item) => (
+                                <div key={item.produto.id} className={styles.summaryItem}>
+                                    <span>{item.produto.nm_prod} x {item.quantity}</span>
+                                    <span>{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.produto.preco * item.quantity)}</span>
+                                </div>
+                            ))}
                         </div>
                         <div className={styles.summaryTotal}>
                             <span>Total</span>
-                            <span>R$ 80,00</span>
+                            <span>{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(total)}</span>
                         </div>
                         <Button>Finalizar Compra</Button>
                     </aside>
