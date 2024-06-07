@@ -1,0 +1,17 @@
+.containerAll {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerProd {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Centraliza os itens horizontalmente */
+        gap: 20px; /* Adiciona espaço entre os produtos */
+        margin: auto; /* Centraliza o contêiner na tela */
+        max-width: 1200px; /* Define uma largura máxima para o contêiner */
+}
+
+

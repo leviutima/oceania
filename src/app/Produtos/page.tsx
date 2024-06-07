@@ -6,6 +6,7 @@ import { Produto, getAllProdutos } from '../../Services/ProdutoService';
 import Grid from '@mui/material/Grid';
 import CircularProgress from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Typography';
+import style from '../Produtos/Produtos.module.css'
 
 const ProdutoPage: React.FC = () => {
     const [produtos, setProdutos] = useState<Produto[]>([]);
@@ -40,15 +41,15 @@ const ProdutoPage: React.FC = () => {
     return (
         <>
             <Header />
-            <div>
+            <div className={style.containerAll}>
                 <h1>Lista de Produtos</h1>
-                <Grid container spacing={2}>
+                <div className={style.containerProd}>
                     {produtos.map((produto) => (
-                        <Grid item key={produto.id_prod} xs={12} sm={6} md={4}>
+                        <Grid item key={produto.id_prod} xs={12} sm={6} md={4} className={style.produtoItem}>
                             <ProdutoCard produto={produto} />
                         </Grid>
                     ))}
-                </Grid>
+                </div>
             </div>
         </>
     );
