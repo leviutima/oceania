@@ -1,5 +1,6 @@
 .cabecalho {
     padding: 1% 0;
+    background-color: #DED0B6;
 }
 
 .container {
@@ -15,7 +16,7 @@
 }
 
 .menu {
-    color: var(--azul-claro);
+    color: var(--azul-escuro);
     list-style: none;
     font-size: 20px;
 }
@@ -44,7 +45,7 @@
 }
 
 .hamburger span {
-    background: var(--azul-claro);
+    background: var(--azul-escuro);
     height: 3px;
     width: 25px;
     margin: 4px;
@@ -73,6 +74,8 @@
     padding: 10px;
     width: 100%;
     text-align: center;
+
+    color: var(--azul-escuro);
 }
 
 @media (max-width: 768px) {

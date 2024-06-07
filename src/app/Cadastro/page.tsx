@@ -6,6 +6,7 @@ import Button from "../components/Button/Button";
 import Image from "next/image";
 import logo from '../../../public/C-Baleia.png';
 import { createCliente, Cliente } from '../../Services/ClienteService';
+import Link from 'next/link';
 
 const Cadastro = () => {
     const [nome, setNome] = useState<string>('');
@@ -125,6 +126,8 @@ const Cadastro = () => {
                         {success && <p className={style.successMessage}>{success}</p>}
                     </div>
                 </div>
+                <div>
+                <span>Caso seja um lojista,</span><span> clique <Link href='/Lojista'>AQUI</Link> para se cadastrar como lojista</span></div>
             </section>
         </>
     );

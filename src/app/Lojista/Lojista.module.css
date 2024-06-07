@@ -1,0 +1,48 @@
+.containerSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0 0 0;
+}
+
+.cardLojista {
+    width: 35vw;
+    height: 50vh;
+    background-color: var(--azul-escuro);
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+
+}
+
+.subContainer {
+    display: grid;
+    gap: 15px;
+}
+
+.containerInput {
+    display: flex;
+    flex-direction: column;
+
+    color: #fff;
+    gap: 2px;
+}
+
+.inputStyle {
+    width: 25vw;
+    height: 4vh;
+
+    border-radius: 5px;
+    background-color: var(--cinza);
+    border: none;
+}
