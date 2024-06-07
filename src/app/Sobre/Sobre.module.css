@@ -57,4 +57,9 @@
 .vivian {
     background-color: var(--azul-escuro);
     color: var(--cor-principal);
+    width: 100%;
+}
+
+.vivian h2 {
+    color: var(--cor-principal);
 }

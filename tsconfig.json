@@ -1,45 +1,33 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "baseUrl": ".",
-    "paths": {
-      "@types/*": [
-        "types/*"
-      ],
-      "@services/*": [
-        "services/*"
-      ]
+    "target": "es5",                            /* Especifica a versão do ECMAScript para o qual o TypeScript vai transpilar seu código. */
+    "lib": ["dom", "dom.iterable", "esnext"],    /* Inclui as bibliotecas padrão que estarão disponíveis em tempo de execução. */
+    "allowJs": true,                            /* Permite a inclusão de arquivos JavaScript no projeto. */
+    "skipLibCheck": true,                       /* Pula a verificação de tipos das bibliotecas de definições de tipo. */
+    "strict": true,                             /* Habilita todas as opções de verificação de tipo estrito. */
+    "forceConsistentCasingInFileNames": true,    /* Garante consistência de maiúsculas e minúsculas nos nomes de arquivos. */
+    "noEmit": true,                             /* Não emite arquivos de saída (útil para projetos somente TypeScript). */
+    "esModuleInterop": true,                    /* Habilita a interoperabilidade de módulos do ES6. */
+    "module": "commonjs",                       /* Define o sistema de módulos a ser usado (por exemplo, 'commonjs', 'amd', 'es6', etc.). */
+    "moduleResolution": "node",                 /* Define como o TypeScript resolve módulos. */
+    "resolveJsonModule": true,                  /* Permite a importação de arquivos JSON como módulos. */
+    "isolatedModules": true,                    /* Garante que cada arquivo é tratado como um módulo independente. */
+    "jsx": "preserve",                          /* Define como o TypeScript processa JSX. */
+    "incremental": true,                        /* Habilita a compilação incremental para melhorar o tempo de compilação. */
+    "baseUrl": ".",                             /* Define o diretório base para a resolução de módulos. */
+    "paths": {                                  /* Mapeamento de caminhos para importações de módulos. */
+      "@types/*": ["types/*"],
+      "@services/*": ["services/*"]
     },
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "plugins": [{ "name": "next" }]             /* Plugins adicionais (por exemplo, para projetos Next.js). */
   },
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
+    "next-env.d.ts",                            /* Arquivo de definições de ambiente para Next.js. */
+    "**/*.ts",                                  /* Inclui todos os arquivos TypeScript no projeto. */
+    "**/*.tsx",                                 /* Inclui todos os arquivos TypeScript com JSX no projeto. */
+    ".next/types/**/*.ts"                       /* Inclui arquivos de definições de tipos do Next.js. */
   ],
   "exclude": [
-    "node_modules"
+    "node_modules"                              /* Exclui a pasta 'node_modules' do processo de compilação. */
   ]
 }
