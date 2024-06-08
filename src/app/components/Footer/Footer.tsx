@@ -16,7 +16,7 @@ const Footer = () => {
                 </div>
                 <div className={style.columStyle}>
                     <span>NOSSOS PRODUTOS</span>
-                    <Link href='*' className={style.linkStyle}>
+                    <Link href='/Produtos' className={style.linkStyle}>
                         <p>produtos</p>
                     </Link>
                 </div>
