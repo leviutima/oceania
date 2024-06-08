@@ -32,7 +32,7 @@ const Footer = () => {
                     <span>Levi Yuki Utima / RM: 553580</span>
                 </div>
                 <div className={style.integrantes}>
-                    <span>Vivian Sy Ting Wu / RM: 5535169</span>
+                    <span>Vivian Sy Ting Wu / RM: 553169</span>
                 </div>
                 <div className={style.integrantes}>
                     <span>Jhonatan Sampaio Ferreira / RM: 553791</span>
