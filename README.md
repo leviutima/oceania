@@ -1,8 +1,13 @@
 <span>--INTEGRANTES</span>
+</br>
 <span>--1TDSPR</span>
+</br>
 <span> --RM553791  -  Jhonatan Sampaio Ferreira </span>
+</br>
 <span> --RM553580  -  Levi Yuki Utima </span>
+</br>
 <span> --RM553169  -  Vivian Sy Ting Wu </span>
+</br>
 
 
 <h1>Como ter uma boa experiência no Oceânia?</h1>
