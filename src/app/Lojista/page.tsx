@@ -45,6 +45,7 @@ const Lojista: React.FC = () => {
 
     return (
         <section className={style.containerSection}>
+            <h1>Página em produção</h1>
             <div className={style.cardLojista}>
                 <div className={style.container}>
                     <form onSubmit={handleSubmit}>
